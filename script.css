@@ -1,0 +1,180 @@
+/* ==========================
+   RESET
+========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+/* ==========================
+   BODY
+========================== */
+body{
+    background:#0f1117;
+    color:#ffffff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+.container{
+    width:100%;
+    max-width:600px;
+    text-align:center;
+}
+
+h1{
+    font-size:2rem;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+/* ==========================
+   SCORE BOARD
+========================== */
+.score-board{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.score-card{
+    flex:1;
+    background:#1a1d29;
+    border:1px solid #2a2f42;
+    border-radius:16px;
+    padding:16px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+
+.score-card h3{
+    font-size:14px;
+    color:#9ea7b8;
+    margin-bottom:8px;
+}
+
+.score-card p{
+    font-size:24px;
+    font-weight:bold;
+    color:#ffffff;
+}
+
+/* ==========================
+   GAME AREA
+========================== */
+.game-wrapper{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+canvas{
+    width:100%;
+    max-width:500px;
+    aspect-ratio:1;
+    background:#161922;
+    border:3px solid #2a2f42;
+    border-radius:18px;
+    box-shadow:
+        0 0 20px rgba(0,0,0,0.35),
+        inset 0 0 20px rgba(255,255,255,0.02);
+}
+
+/* ==========================
+   OVERLAY
+========================== */
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.75);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:18px;
+    backdrop-filter:blur(4px);
+}
+
+.hidden{
+    display:none;
+}
+
+.overlay h2{
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+button{
+    background:#4f7cff;
+    color:white;
+    border:none;
+
+    padding:12px 22px;
+    border-radius:12px;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+    transition:all 0.2s ease;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    background:#6590ff;
+}
+
+button:active{
+    transform:scale(0.98);
+}
+
+.controls{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+/* ==========================
+   INFO TEXT
+========================== */
+.info{
+    margin-top:18px;
+    color:#8d95a5;
+    font-size:14px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media(max-width:600px){
+
+    h1{
+        font-size:1.7rem;
+    }
+
+    .score-board{
+        flex-direction:column;
+    }
+
+    .score-card p{
+        font-size:20px;
+    }
+
+    button{
+        width:100%;
+    }
+}
